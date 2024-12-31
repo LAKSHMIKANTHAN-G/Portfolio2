@@ -1,0 +1,448 @@
+/* Global Reset and Box Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header Style */
+header {
+  background-color: #007acc;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Section Styling */
+.section {
+  padding: 60px;
+  text-align: center;
+}
+
+/* Home Section */
+#home {
+  background: #004080;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Typewriter Effect */
+#home h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: white;
+  font-family: "Arial", sans-serif;
+  white-space: nowrap; /* Ensures text doesn't wrap */
+  overflow: hidden; /* Hides the text that hasn't "typed" yet */
+  border-right: 0.15em solid orange; /* Simulates the blinking cursor */
+  width: 100%;
+  max-width: 0; /* Initially hide the text */
+  animation: typing 3.5s steps(30, end) forwards,
+    blink-caret 0.75s step-end infinite; /* Typing and blinking effects */
+}
+
+@keyframes typing {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%; /* Reveal text fully after typing */
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+#home a {
+  display: inline-block;
+  background-color: #ffa500;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+/* About Section */
+#about {
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 60px;
+}
+
+#about .profile-photo {
+  margin-right: 30px;
+  flex-shrink: 0;
+  margin-top: 30px;
+}
+
+#about .profile-photo img {
+  width: 200px;
+}
+
+#about h2 {
+  text-align: center;
+  margin: 0 auto;
+  flex: 1 100%;
+  color: #007acc;
+}
+
+#about .about-points {
+  width: 60%;
+  text-align: left;
+  margin-top: 20px;
+}
+
+#about .about-points ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: justify;
+}
+
+#about .about-points li {
+  padding: 8px 0;
+}
+
+/* Expertise Section */
+#expertise {
+  background-color: #f4f4f4;
+  padding: 60px 0 30px; /* Reduced bottom padding */
+}
+
+#expertise h2 {
+  font-size: 2rem;
+  color: #007acc;
+  margin-bottom: 30px;
+}
+
+#expertise ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+#expertise ul li {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  height: 120px;
+  font-size: 1.1rem;
+}
+
+#expertise ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+#expertise ul li.full-stack {
+  background-color: #1818e7;
+  color: white;
+}
+
+#expertise ul li.dbms {
+  background-color: #2c3e50;
+  color: white;
+}
+
+#expertise ul li.software-testing {
+  background-color: #f39c12;
+  color: white;
+}
+
+#expertise ul li.reactjs {
+  background-color: #ed286d;
+  color: white;
+}
+
+#expertise ul li.c-programming {
+  background-color: #27ae60;
+  color: white;
+}
+
+#expertise ul li.cpp-programming {
+  background-color: #8e44ad;
+  color: white;
+}
+
+#expertise ul li.java-programming {
+  background-color: #9b59b6;
+  color: white;
+}
+
+#expertise ul li.python-programming {
+  background-color: #16a085;
+  color: white;
+}
+
+#expertise ul li.mysql {
+  background-color: #e67e22;
+  color: white;
+}
+
+#expertise ul li.web-dev {
+  background-color: #34495e;
+  color: white;
+}
+
+#expertise ul li.graphics-design {
+  background-color: #f39c12;
+  color: white;
+}
+
+/* Projects Section */
+#experience {
+  background-color: #f4f4f4;
+  padding: 30px 0; /* Reduced padding between sections */
+}
+
+#experience h2 {
+  font-size: 2rem;
+  color: #007acc;
+  margin-bottom: 30px;
+}
+
+#experience ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Ensures 3 boxes per row */
+  gap: 20px;
+}
+
+#experience ul li {
+  background-color: #f0f0f0; /* Apply the provided color here */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: left;
+  position: relative;
+  height: 200px; /* Increased height to accommodate description */
+  overflow: hidden;
+}
+
+#experience ul li strong {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+#experience ul li .project-description {
+  font-size: 1rem;
+  color: #666;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  opacity: 1; /* Ensure it is visible */
+  font-style: normal; /* Removed italic style */
+  margin-top: 10px; /* Added space above the description */
+}
+
+#experience ul li:hover .project-description {
+  opacity: 1; /* Keep the description visible on hover */
+}
+
+/* Achievements Section */
+#achievements {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+}
+
+#achievements h2 {
+  font-size: 2rem;
+  color: #007acc;
+  margin-bottom: 30px;
+}
+
+#achievements ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+#achievements ul li {
+  background-color: #ffffff;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+  width: 80%; /* Set a width for better alignment */
+  text-align: left;
+}
+
+#achievements ul li:last-child {
+  margin-bottom: 0;
+}
+
+#achievements ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer Style */
+footer {
+  background-color: #007acc;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 600px) {
+  #expertise ul {
+    grid-template-columns: 1fr;
+  }
+
+  #experience ul {
+    grid-template-columns: 1fr;
+  }
+
+  #achievements ul li {
+    width: 100%; /* Make achievements items full-width on small screens */
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #expertise ul {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  #experience ul {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+/* Contact Section */
+#contact {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  color: #007acc;
+  margin-bottom: 30px;
+}
+
+#contact .contact-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact .input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+#contact .input-group label {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#contact .input-group input,
+#contact .input-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+#contact .input-group textarea {
+  height: 150px;
+  resize: none;
+}
+
+#contact .submit-btn {
+  background-color: #007acc;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact .submit-btn:hover {
+  background-color: #005fa3;
+}
+
+#contact .form-message {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: green;
+}
+
+#contact .form-message.error {
+  color: red;
+}
